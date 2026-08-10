@@ -9,17 +9,17 @@ import {
 import { FiArrowDown, FiArrowUpRight, FiMail } from 'react-icons/fi';
 import profileImage from '../assets/Najmul.jpeg';
 
-const roles = ['Frontend Developer', 'React Specialist', 'Full-Stack Builder'];
+const roles = ['Full Stack Developer', 'Next.js · React Developer', 'Node.js · MongoDB Developer'];
 
 const terminalLines = [
-  { command: 'whoami', output: 'Najmul Haque — Frontend / Full-Stack Developer' },
-  { command: 'stack', output: 'React 19 · Vite · Tailwind v4 · Framer Motion' },
+  { command: 'whoami', output: 'Najmul Haque — Full Stack Developer' },
+  { command: 'stack', output: 'Next.js · Node.js · MongoDB · Socket.IO' },
   { command: 'location', output: 'Dhaka, Bangladesh · Remote-friendly' },
   { command: 'status', output: '● Available for new projects' },
 ];
 
 const stats = [
-  { value: '3+', label: 'Years experience' },
+  { value: '1+', label: 'Year experience' },
   { value: '25+', label: 'Projects shipped' },
   { value: '12+', label: 'Technologies' },
   { value: '∞', label: 'Cups of coffee' },
@@ -180,7 +180,7 @@ const Hero = () => {
               <div className="relative overflow-hidden rounded-t-xl rounded-b-2xl border-2 border-zinc-700/80 bg-zinc-900">
                 <img
                   src={profileImage}
-                  alt="Najmul Haque — frontend developer"
+                  alt="Najmul Haque — full stack developer"
                   className="h-36 w-28 object-cover grayscale-[20%] transition duration-500 group-hover:grayscale-0 sm:h-44 sm:w-32"
                 />
               </div>

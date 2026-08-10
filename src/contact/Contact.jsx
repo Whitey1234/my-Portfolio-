@@ -14,7 +14,7 @@ const channels = [
   {
     icon: <FiPhone />,
     label: 'Phone',
-    value: '+880 1743 299 191',
+    value: '+880 1743 299 919',
     href: 'tel:+8801743299919',
     hint: 'Mon–Fri · 10:00–19:00 BD time',
   },
