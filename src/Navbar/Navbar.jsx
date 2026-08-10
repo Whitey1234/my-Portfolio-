@@ -44,8 +44,8 @@ const Navbar = () => {
 
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#hero" className="font-mono text-lg tracking-tight text-zinc-100">
-          <span className="text-amber-300/90">{'[{ '}</span>
-          najmul.dev
+          <span className="text-amber-300/90">{'{ '}</span>
+          Najmul.dev
           <span className="text-amber-300/90">{' }'}</span>
         </a>
 

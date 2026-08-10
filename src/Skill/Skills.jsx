@@ -10,6 +10,7 @@ import {
   SiNextdotjs,
   SiRedux,
   SiShadcnui,
+  SiSocketdotio,
   SiTailwindcss,
   SiTypescript,
   SiVite,
@@ -44,6 +45,7 @@ const categories = [
       { name: 'Express', icon: <SiExpress className="text-zinc-300" /> },
       { name: 'Firebase', icon: <SiFirebase className="text-amber-500" /> },
       { name: 'MongoDB', icon: <SiMongodb className="text-green-600" /> },
+      { name: 'Socket.IO', icon: <SiSocketdotio className="text-zinc-200" /> },
     ],
   },
   {
@@ -75,6 +77,7 @@ const ticker = [
   'Figma',
   'Linux',
   'REST APIs',
+  'Socket.IO',
   'Framer Motion',
 ];
 

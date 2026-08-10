@@ -7,25 +7,168 @@ import {
 } from 'react-icons/fa';
 import { FiCode, FiExternalLink, FiGithub } from 'react-icons/fi';
 import {
+  SiCloudinary,
   SiD3Dotjs,
   SiExpress,
   SiFirebase,
+  SiJsonwebtokens,
   SiMongodb,
+  SiNextdotjs,
+  SiRedux,
+  SiShadcnui,
+  SiSocketdotio,
   SiTailwindcss,
 } from 'react-icons/si';
 import SectionHeading from '../components/SectionHeading';
+import bazarica from '../assets/bazarica.png';
 import img1 from '../assets/6861bbace64c3b108d347197.jpg';
 import img2 from '../assets/all-devices-black.png';
 import img3 from '../assets/6861c6d3aa250f50426fde67.jpg';
+import passport from '../assets/passport-extractor.png';
+import quadra from '../assets/quadra.png';
+import socialbd from '../assets/socialbd.png';
 
 const projects = [
   {
     id: 1,
+    title: 'Bazarica',
+    image: bazarica,
+    description:
+      'Multi-Vendor E-commerce Platform with admin, vendor & user dashboards, role-based auth, sales analytics, and multi-courier delivery via Pathao & RedX.',
+    role: 'Full Stack Developer',
+    technologies: [
+      'Next.js',
+      'React.js',
+      'Redux Toolkit',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+      'Firebase',
+      'Cloudinary',
+      'Pathao API',
+      'RedX API',
+    ],
+    liveLink: 'https://bazarica.vercel.app/',
+    demo: [
+      { role: 'Admin', email: 'admin@gmail.com', password: '12345678' },
+      { role: 'Vendor / Seller', email: 'riyaz@gmail.com', password: '12345678' },
+      { role: 'User', email: 'user@gmail.com', password: '12345678' },
+    ],
+    challenges: [
+      'Designing a tri-role system (admin, vendor, user) with JWT-based authorization',
+      'Integrating multiple courier APIs (Pathao & RedX) into a single checkout flow',
+      'Keeping inventory, orders, and returns in sync across three dashboards',
+    ],
+    improvements: [
+      'Add real-time order tracking with Socket.IO',
+      'Introduce multiple payment gateways & mobile banking',
+      'Expand analytics with product-level forecasting',
+    ],
+  },
+  {
+    id: 2,
+    title: 'SocialBD',
+    image: socialbd,
+    description:
+      'Modern social networking platform with a community forum, quiz system, gamification, real-time chat, and full admin/user dashboards.',
+    role: 'Full Stack Developer',
+    technologies: [
+      'Next.js',
+      'React.js',
+      'Zustand',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Socket.IO',
+      'JWT',
+      'Cloudinary',
+    ],
+    liveLink: 'https://socialbd.net/',
+    demo: [
+      { role: 'User', email: 'user@gmail.com', password: '12345678' },
+      { role: 'Admin', email: 'admin@gmail.com', password: '12345678' },
+    ],
+    challenges: [
+      'Real-time chat & notifications over Socket.IO with online presence',
+      'Gamification — points, streaks, and rewards tied to user activity',
+      'Scaling forum feeds, quizzes, and posts under one role-aware schema',
+    ],
+    improvements: [
+      'Add end-to-end encryption for direct messages',
+      'Introduce video rooms & live streaming',
+      'Feed ranking with a personalized engagement algorithm',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Passport Extractor',
+    image: passport,
+    description:
+      'AI OCR tool powered by Tesseract.js — detects and parses the ICAO MRZ zone of passports, extracting number, name, nationality, DOB, gender & expiry with auto-correction.',
+    role: 'Full Stack Developer',
+    technologies: [
+      'Next.js',
+      'React.js',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Tesseract.js',
+    ],
+    liveLink: 'https://passport-extractor-lac.vercel.app/',
+    challenges: [
+      'Accurate MRZ detection & parsing per the ICAO 9303 standard',
+      'OCR error detection and auto-correction on real document scans',
+      'Real-time image processing without sacrificing response speed',
+    ],
+    improvements: [
+      'Add NFC chip reading as a fallback',
+      'Support MRZ variants from more visa/travel documents',
+      'Add liveness checks to prevent document spoofing',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Quadra',
+    image: quadra,
+    description:
+      'Modern, full-stack social media application built with Next.js and Node.js — real-time messaging, post interactions, notifications, and more.',
+    role: 'Full Stack Developer',
+    technologies: [
+      'Next.js',
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Socket.IO',
+      'shadcn/ui',
+      'CSS3',
+      'JavaScript',
+    ],
+    liveLink: 'https://quadra-blush.vercel.app/',
+    challenges: [
+      'Real-time messaging with Socket.IO and reliable online presence',
+      'Live notifications and post interactions without page reloads',
+      'Structuring a scalable social feed and follow graph on MongoDB',
+    ],
+    improvements: [
+      'Add voice & video calling',
+      'Introduce end-to-end encryption for private chats',
+      'Feed ranking with a personalized engagement algorithm',
+    ],
+  },
+  {
+    id: 5,
     title: 'Language Master',
     image: img1,
     description:
       'A full-featured tutor booking platform with easy scheduling, community posts, and an admin dashboard.',
-    role: 'Lead full-stack developer',
+    role: 'Lead Full Stack Developer',
     technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
     liveLink: 'https://tutor-booking--ass-11.web.app',
     githubLink: 'https://github.com/Whitey1234/tutor-booked',
@@ -41,12 +184,12 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     title: 'Recipe Book',
     image: img2,
     description:
       'A recipe platform with 100+ searchable recipes, user-friendly filtering, and an admin dashboard.',
-    role: 'Frontend + backend integration',
+    role: 'Full stack developer',
     technologies: ['React', 'Firebase', 'Tailwind CSS'],
     liveLink: 'https://recipe-book-1fb64.web.app/',
     githubLink: 'https://github.com/Whitey1234/recipe-books',
@@ -62,12 +205,12 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 7,
     title: 'Pay Needs',
     image: img3,
     description:
       'A smart payments solution with data-driven dashboards and responsive visualizations.',
-    role: 'Full-stack developer',
+    role: 'Full Stack Developer',
     technologies: ['tailwind', 'React', 'Express', 'MongoDB', 'D3.js'],
     liveLink: 'https://payneeds-ass9.web.app/',
     githubLink: 'https://github.com/Whitey1234/payNeeds',
@@ -86,12 +229,20 @@ const projects = [
 
 const techIcons = {
   'React': <FaReact className="text-cyan-400" />,
+  'React.js': <FaReact className="text-cyan-400" />,
+  'Next.js': <SiNextdotjs className="text-zinc-100" />,
   'Node.js': <FaNodeJs className="text-green-500" />,
   'MongoDB': <SiMongodb className="text-green-600" />,
   'Express': <SiExpress className="text-zinc-300" />,
+  'Express.js': <SiExpress className="text-zinc-300" />,
   'Firebase': <SiFirebase className="text-amber-500" />,
   'Tailwind CSS': <SiTailwindcss className="text-cyan-300" />,
   'tailwind': <SiTailwindcss className="text-cyan-300" />,
+  'Redux Toolkit': <SiRedux className="text-purple-400" />,
+  'shadcn/ui': <SiShadcnui className="text-zinc-200" />,
+  'Socket.IO': <SiSocketdotio className="text-zinc-200" />,
+  'JWT': <SiJsonwebtokens className="text-rose-400" />,
+  'Cloudinary': <SiCloudinary className="text-sky-400" />,
   'D3.js': <SiD3Dotjs className="text-amber-400" />,
 };
 
@@ -167,15 +318,17 @@ const Projects = () => {
                 <FiExternalLink />
                 Live
               </a>
-              <a
-                href={featured.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono text-sm text-zinc-400 transition-colors hover:text-zinc-100"
-              >
-                <FiGithub />
-                Source
-              </a>
+              {featured.githubLink && (
+                <a
+                  href={featured.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-mono text-sm text-zinc-400 transition-colors hover:text-zinc-100"
+                >
+                  <FiGithub />
+                  Source
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
@@ -279,6 +432,22 @@ const Projects = () => {
                   ))}
                 </div>
 
+                {selectedProject.demo && (
+                  <div className="mt-6 rounded-xl border border-amber-400/20 bg-amber-400/[0.04] px-4 py-3">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber-300/90">
+                      Demo credentials
+                    </p>
+                    <div className="mt-2 flex flex-col gap-1.5 sm:flex-row sm:flex-wrap sm:gap-x-6">
+                      {selectedProject.demo.map((cred) => (
+                        <p key={cred.role} className="font-mono text-xs text-zinc-400">
+                          <span className="text-zinc-200">{cred.role}</span> · {cred.email} ·{' '}
+                          {cred.password}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="mt-10 grid gap-10 md:grid-cols-2">
                   <div>
                     <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.3em] text-amber-300/90">
@@ -320,15 +489,17 @@ const Projects = () => {
                     <FiExternalLink />
                     Live demo
                   </a>
-                  <a
-                    href={selectedProject.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-2.5 font-mono text-sm text-zinc-300 transition-colors duration-300 hover:border-amber-400/60 hover:text-amber-300"
-                  >
-                    <FiGithub />
-                    View source
-                  </a>
+                  {selectedProject.githubLink && (
+                    <a
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-2.5 font-mono text-sm text-zinc-300 transition-colors duration-300 hover:border-amber-400/60 hover:text-amber-300"
+                    >
+                      <FiGithub />
+                      View source
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
