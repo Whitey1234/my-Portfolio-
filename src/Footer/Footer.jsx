@@ -57,8 +57,7 @@ const Footer = () => {
               <span className="text-amber-300/90">{' }'}</span>
             </a>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-zinc-500">
-              Frontend-focused full-stack developer building fast, accessible, well-crafted web
-              products.
+              Full Stack Developer building fast, accessible, well-crafted web products.
             </p>
           </div>
 

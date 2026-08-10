@@ -4,7 +4,7 @@ import SectionHeading from '../components/SectionHeading';
 import profileImage from '../assets/Najmul.jpeg';
 
 const metrics = [
-  { to: 3, suffix: '+', label: 'Years hands-on' },
+  { to: 1, suffix: '+', label: 'Year experience' },
   { to: 25, suffix: '+', label: 'Projects shipped' },
   { to: 12, suffix: '+', label: 'Technologies' },
   { to: 40, suffix: '+', label: 'Contributions' },
@@ -16,6 +16,7 @@ const focusAreas = [
   'Performance & a11y',
   'API design',
   'UI motion',
+  'Real-time · Socket.IO',
   'Lean full-stack',
 ];
 
@@ -86,9 +87,9 @@ const About = () => {
               </div>
 
               <div className="absolute -bottom-5 left-6 rounded-xl border border-zinc-700 bg-zinc-950/90 px-4 py-3 shadow-xl backdrop-blur">
-                <CountUp to={3} suffix="+" />
+                <CountUp to={1} suffix="+" />
                 <p className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
-                  Years building for the web
+                  Year building for the web
                 </p>
               </div>
             </div>
@@ -108,9 +109,10 @@ const About = () => {
               </h3>
               <div className="mt-5 space-y-4 text-base leading-relaxed text-zinc-400">
                 <p>
-                  I’m a frontend-focused full-stack developer with 3+ years building for the web.
-                  My day-to-day is React, modern CSS, and Node — but my real job is turning messy
-                  requirements into products that are fast, accessible, and pleasant to use.
+                  I’m a full stack developer with 1+ year of experience building for the web.
+                  My day-to-day is Next.js, React, Node.js, and MongoDB — plus real-time features
+                  with Socket.IO. But my real job is turning messy requirements into products that
+                  are fast, accessible, and pleasant to use.
                 </p>
                 <p>
                   I sweat the details others skip: motion that respects
