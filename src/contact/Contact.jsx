@@ -1,134 +1,133 @@
-// src/components/Contact.jsx
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMessageSquare } from 'react-icons/fi';
-import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FiArrowUpRight, FiMail, FiPhone } from 'react-icons/fi';
+import SectionHeading from '../components/SectionHeading';
+
+const channels = [
+  {
+    icon: <FiMail />,
+    label: 'Email',
+    value: 'najmulsiyam20@gmail.com',
+    href: 'mailto:najmulsiyam20@gmail.com',
+    hint: 'Best for briefs & offers',
+  },
+  {
+    icon: <FiPhone />,
+    label: 'Phone',
+    value: '+880 1743 299 191',
+    href: 'tel:+8801743299919',
+    hint: 'Mon–Fri · 10:00–19:00 BD time',
+  },
+  {
+    icon: <FaWhatsapp />,
+    label: 'WhatsApp',
+    value: 'Chat on WhatsApp',
+    href: 'https://wa.me/8801743299919',
+    hint: 'Usually the fastest reply',
+  },
+];
+
+const socials = [
+  { icon: <FaGithub />, href: 'https://github.com/Whitey1234', label: 'GitHub' },
+  { icon: <FaFacebook />, href: 'https://www.facebook.com/najmul.hassan.571047', label: 'Facebook' },
+  { icon: <FaTwitter />, href: 'https://x.com/NajmulHassn_', label: 'Twitter / X' },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-gray-900 to-gray-800">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
+    <section id="contact" className="relative overflow-hidden bg-zinc-900/40 py-24 md:py-32">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,#fbbf24_0%,transparent_50%)] opacity-[0.05]" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          index="06"
+          label="Contact"
+          title="Let’s build something worth shipping."
+          description="Whether it’s a full product, a tricky component, or a straight code review — I’m easy to talk to."
+        />
+
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          className="flex flex-col items-center gap-4"
         >
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
-            Get In Touch
-          </h2>
-          <div className="w-20 h-1 bg-cyan-400 mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-            Have a project in mind or want to connect? Reach out through any of these channels
+          <a
+            href="mailto:najmulsiyam20@gmail.com"
+            className="group inline-flex items-center gap-3 rounded-xl bg-amber-400 px-7 py-4 font-mono text-sm font-semibold text-zinc-950 shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-[1.03] hover:bg-amber-300"
+          >
+            najmulsiyam20@gmail.com
+            <FiArrowUpRight className="text-base transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+          <p className="flex items-center gap-2 font-mono text-xs text-zinc-500">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
+            Usually replies within 24 hours
           </p>
         </motion.div>
 
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Email Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-cyan-400/30 transition-all duration-300"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400">
-                <FiMail className="text-2xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-white">Email</h3>
-            </div>
-            <a 
-              href="mailto:najmulsiyam20@gmail.com" 
-              className="text-gray-300 hover:text-cyan-400 transition-colors break-all"
-            >
-              najmulsiyam20@gmail.com
-            </a>
-          </motion.div>
-
-          {/* Phone Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-cyan-400/30 transition-all duration-300"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-600/20 text-purple-400">
-                <FiPhone className="text-2xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-white">Phone</h3>
-            </div>
-            <a 
-              href="tel:+1234567890" 
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-            >
-              +8801743299919
-            </a>
-          </motion.div>
-
-          {/* WhatsApp Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-cyan-400/30 transition-all duration-300"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-600/20 text-green-400">
-                <FaWhatsapp className="text-2xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-white">WhatsApp</h3>
-            </div>
-            <a 
-              href="https://wa.me/01743299919" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-            >
-              +8801743299919
-            </a>
-          </motion.div>
-        </div>
-
-        {/* Additional Contact Options */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-40px' }}
+          className="mt-16 grid gap-4 sm:grid-cols-3"
         >
-          <h3 className="text-xl font-semibold text-white mb-4">Other Ways to Connect</h3>
-          <div className="flex justify-center gap-4">
+          {channels.map((channel) => (
             <motion.a
-              whileHover={{ y: -3, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              href="https://t.me/yourusername"
+              key={channel.label}
+              variants={fadeUp}
+              href={channel.href}
+              target={channel.href.startsWith('http') ? '_blank' : undefined}
+              rel={channel.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              whileHover={{ y: -6 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition-colors duration-300 hover:border-amber-400/50"
+            >
+              <div className="flex items-center justify-between">
+                <span className="grid h-11 w-11 place-items-center rounded-lg border border-zinc-700 bg-zinc-950/60 text-lg text-amber-300 transition-colors duration-300 group-hover:border-amber-400/60">
+                  {channel.icon}
+                </span>
+                <FiArrowUpRight className="text-zinc-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-amber-300" />
+              </div>
+              <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.3em] text-amber-300/80">
+                {channel.label}
+              </p>
+              <p className="mt-2 break-all font-sans text-base font-medium text-zinc-200">
+                {channel.value}
+              </p>
+              <p className="mt-1 font-mono text-xs text-zinc-500">{channel.hint}</p>
+            </motion.a>
+          ))}
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-40px' }}
+          className="mt-14 flex items-center justify-center gap-3"
+        >
+          <span className="hidden h-px w-16 bg-zinc-800 sm:block" />
+          {socials.map((s) => (
+            <motion.a
+              key={s.label}
+              href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-gray-700 hover:bg-cyan-500/20 text-gray-300 hover:text-cyan-400 transition-all"
-              aria-label="Telegram"
+              aria-label={s.label}
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid h-11 w-11 place-items-center rounded-full border border-zinc-800 bg-zinc-900/50 text-base text-zinc-400 transition-colors hover:border-amber-400/50 hover:text-amber-300"
             >
-              <FaTelegram className="text-2xl" />
+              {s.icon}
             </motion.a>
-            <motion.a
-              whileHover={{ y: -3, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              href="sms:+1234567890"
-              className="p-3 rounded-full bg-gray-700 hover:bg-cyan-500/20 text-gray-300 hover:text-cyan-400 transition-all"
-              aria-label="Text Message"
-            >
-              <FiMessageSquare className="text-2xl" />
-            </motion.a>
-          </div>
+          ))}
+          <span className="hidden h-px w-16 bg-zinc-800 sm:block" />
         </motion.div>
       </div>
     </section>
